@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Football Profile</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #080406;
+}
+
+.profile-page {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    background: url("design-background.jpg") center / 100% 100% no-repeat;
+}
+
+.profile-text {
+    position: absolute;
+    left: 47.2%;
+    width: 33.8%;
+    height: 4.5%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: clamp(8px, 1.7vw, 22px);
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-decoration: none;
+    text-shadow: 0 1px 3px black;
+    user-select: none;
+}
+
+a.profile-text {
+    cursor: pointer;
+}
+
+.name      { top: 37.78%; }
+.job       { top: 44.5%; }
+.phone     { top: 50.9%; }
+.whatsapp  { top: 57.7%; }
+.tiktok    { top: 64.6%; }
+.telegram  { top: 71.3%; }
+.efootball { top: 78%; }
+.fcmobile  { top: 85.3%; }
+
+@media (max-width: 480px) {
+    .profile-text {
+        font-size: clamp(7px, 2.2vw, 11px);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="profile-page">
+
+    <div class="profile-text name" id="name"></div>
+
+    <div class="profile-text job" id="job"></div>
+
+    <div class="profile-text phone" id="phone"></div>
+
+    <div class="profile-text whatsapp" id="whatsapp"></div>
+
+    <a class="profile-text tiktok" id="tiktok"
+       target="_blank" rel="noopener noreferrer"></a>
+
+    <a class="profile-text telegram" id="telegram"
+       target="_blank" rel="noopener noreferrer"></a>
+
+    <div class="profile-text efootball" id="efootball"></div>
+
+    <div class="profile-text fcmobile" id="fcmobile"></div>
+
+</main>
+
+<script>
+
+// =================================
+// EDIT YOUR INFORMATION HERE
+// =================================
+
+const profile = {
+
+    name: "MOAAZ MOHAMED",
+
+    job: "FOOTBALLER",
+
+    phone: "01020523240",
+
+    whatsapp: "MO3AZ_710",
+
+    tiktokText: "mo3az_710",
+
+    tiktokUrl: "https://tiktok.com/@mo3az_710",
+
+    telegramText: "MO3AZ_710",
+
+    telegramUrl: "https://t.me/MO3AZ_710",
+
+    efootball: "TIK-MO3AZ_710",
+
+    fcmobile: "MO3AZ_710"
+
+};
+
+// =================================
+// DISPLAY INFORMATION
+// =================================
+
+document.getElementById("name").textContent = profile.name;
+
+document.getElementById("job").textContent = profile.job;
+
+document.getElementById("phone").textContent = profile.phone;
+
+// WhatsApp automatically adds @
+
+document.getElementById("whatsapp").textContent =
+    "@" + profile.whatsapp.replace(/^@/, "");
+
+// TikTok link
+
+const tiktok = document.getElementById("tiktok");
+
+tiktok.textContent = profile.tiktokText;
+
+tiktok.href = profile.tiktokUrl;
+
+// Telegram link
+
+const telegram = document.getElementById("telegram");
+
+telegram.textContent = profile.telegramText;
+
+telegram.href = profile.telegramUrl;
+
+// Gaming usernames
+
+document.getElementById("efootball").textContent =
+    profile.efootball;
+
+document.getElementById("fcmobile").textContent =
+    profile.fcmobile;
+
+</script>
+
+</body>
+</html>
